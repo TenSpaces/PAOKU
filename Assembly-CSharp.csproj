@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyAutoCreate.cs" />
     <Compile Include="Assets\Scripts\EnemySpeed.cs" />
+    <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>F:/Unity_3D_File/2018.4/paoku/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

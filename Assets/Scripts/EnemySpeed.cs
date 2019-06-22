@@ -21,7 +21,7 @@ public class EnemySpeed : MonoBehaviour
     //生成速度,后期找一个算法替代随机
     private float CreatSpeed() {
         float x = transforms.position.x;
-        x = 0.02f * (0.5f * Mathf.Sin(x) + 0 * Mathf.Cos(x + 0.783f) + 0.02f * Mathf.Cos(x + 1.047f) + 0.12f * Mathf.Sin(x + 0.628f) + 0.1f * Mathf.Sin(x + 0.935f));
+        x = 0.5f * (0.5f * Mathf.Sin(x) + 0 * Mathf.Cos(x + 0.783f) + 0.02f * Mathf.Cos(x + 1.047f) + 0.12f * Mathf.Sin(x + 0.628f) + 0.1f * Mathf.Sin(x + 0.935f));
         return Mathf.Abs(x);
     }
 }

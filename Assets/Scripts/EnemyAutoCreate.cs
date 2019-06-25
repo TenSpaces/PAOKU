@@ -65,7 +65,7 @@ public class EnemyAutoCreate : MonoBehaviour
         //else if (a == -1) { b = positionx; }
         //Instantiate(enemy, new Vector3(b, 0, this.transform.position.z), Quaternion.AngleAxis(180, Vector3.up));
         Instantiate(enemy, new Vector3(this.transform.position.x, 0, this.transform.position.z), Quaternion.AngleAxis(180, Vector3.up));
-
+        
     }
     #region 判断三个轨道哪一个，后期找一个算法替代随机
     int guidaoPandun() {

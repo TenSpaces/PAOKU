@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 748545051743206889}
   - component: {fileID: 5965883568259099181}
   - component: {fileID: 4175311359197001133}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,4 +136,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d44e3ab21c64af4baa1b2f47aa7c07d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 2934813357017995163}

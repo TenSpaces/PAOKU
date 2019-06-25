@@ -16,6 +16,8 @@ public class EnemyAutoCreate : MonoBehaviour
     public int juli2 = 2;
     [Tooltip("刚开始生成敌人时间间隔")] 
     public float Times=2;
+    [Tooltip("生成敌人最小时间间隔")]
+    public float SmallTimes = 0.65f;
     private float times; //保存Times的初值
     //获取EnemyManager的x值
     private float positionx;
@@ -44,7 +46,7 @@ public class EnemyAutoCreate : MonoBehaviour
         if (TimeManager.time >= Times)
         {
             Times += times;
-            if (times > 0.65f)
+            if (times > SmallTimes)
             {
                 times -= Random.value * 0.1f;
             }
@@ -53,18 +55,19 @@ public class EnemyAutoCreate : MonoBehaviour
     }
     //生成敌人
     void CreateEnemy(GameObject enemy) {
-        a = guidaoPandun();
-        if (a == guidao1)
-            b = positionx-juli2;
-        else if (a == guidao2)
-            b = positionx;
-        else if (a == guidao3)
-            b = positionx+juli2;
-        else if (a == -1) { b = positionx; }
-        Instantiate(enemy, new Vector3(b, 0, this.transform.position.z), Quaternion.AngleAxis(180, Vector3.up));
-      
+        //a = guidaoPandun();
+        //if (a == guidao1)
+        //    b = positionx-juli2;
+        //else if (a == guidao2)
+        //    b = positionx;
+        //else if (a == guidao3)
+        //    b = positionx+juli2;
+        //else if (a == -1) { b = positionx; }
+        //Instantiate(enemy, new Vector3(b, 0, this.transform.position.z), Quaternion.AngleAxis(180, Vector3.up));
+        Instantiate(enemy, new Vector3(this.transform.position.x, 0, this.transform.position.z), Quaternion.AngleAxis(180, Vector3.up));
+
     }
-    //判断三个轨道哪一个，后期找一个算法替代随机
+    #region 判断三个轨道哪一个，后期找一个算法替代随机
     int guidaoPandun() {
         x = 13*(5*Mathf.Sin(TimeManager.time)+3*Mathf.Cos(TimeManager.time+0.783f)+8*Mathf.Cos(TimeManager.time+1.047f)+2*Mathf.Sin(TimeManager.time+0.628f)+ 9 * Mathf.Sin(TimeManager.time + 0.935f));
         Random.InitState((int)x);
@@ -77,6 +80,25 @@ public class EnemyAutoCreate : MonoBehaviour
         else if (a <0.9)
             return guidao3;
         
+        return -1;
+    }
+    #endregion
+
+
+    //生成物体的速度
+    int creatEnemySpeed()
+    {
+        x = 13 * (5 * Mathf.Sin(TimeManager.time) + 3 * Mathf.Cos(TimeManager.time + 0.783f) + 8 * Mathf.Cos(TimeManager.time + 1.047f) + 2 * Mathf.Sin(TimeManager.time + 0.628f) + 9 * Mathf.Sin(TimeManager.time + 0.935f));
+        Random.InitState((int)x);
+        double a = Random.value;
+
+        if (a < 0.3)
+            return guidao1;
+        else if (a < 0.6)
+            return guidao2;
+        else if (a < 0.9)
+            return guidao3;
+
         return -1;
     }
 

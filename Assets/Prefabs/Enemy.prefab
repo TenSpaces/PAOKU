@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2869368059908083106}
   - component: {fileID: 8306269120882533467}
   - component: {fileID: 8161118339161497396}
-  - component: {fileID: 748545051743206889}
   - component: {fileID: 5965883568259099181}
+  - component: {fileID: 1349548964493368817}
   - component: {fileID: 4175311359197001133}
   m_Layer: 10
   m_Name: Enemy
@@ -94,20 +94,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &748545051743206889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2934813357017995163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aafabb79af2e4b46a2778842201bee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zengsu: 1
-  Jiange: 8
 --- !u!54 &5965883568259099181
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,6 +110,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1349548964493368817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934813357017995163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafc40d747467884d98c9b4f3ba6d776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Jiange: 8
 --- !u!114 &4175311359197001133
 MonoBehaviour:
   m_ObjectHideFlags: 0

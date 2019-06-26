@@ -67,39 +67,40 @@ public class EnemyAutoCreate : MonoBehaviour
         Instantiate(enemy, new Vector3(this.transform.position.x, 0, this.transform.position.z), Quaternion.AngleAxis(180, Vector3.up));
         
     }
-    #region 判断三个轨道哪一个，后期找一个算法替代随机
-    int guidaoPandun() {
-        x = 13*(5*Mathf.Sin(TimeManager.time)+3*Mathf.Cos(TimeManager.time+0.783f)+8*Mathf.Cos(TimeManager.time+1.047f)+2*Mathf.Sin(TimeManager.time+0.628f)+ 9 * Mathf.Sin(TimeManager.time + 0.935f));
-        Random.InitState((int)x);
-        double a = Random.value;
-       
-        if (a <0.3)
-            return guidao1;
-        else if (a <0.6)
-            return guidao2;
-        else if (a <0.9)
-            return guidao3;
-        
-        return -1;
-    }
+    #region 判断三个轨道哪一个，后期找一个算法替代随机(舍掉)
+    //int guidaoPandun() {
+    //    x = 13*(5*Mathf.Sin(TimeManager.time)+3*Mathf.Cos(TimeManager.time+0.783f)+8*Mathf.Cos(TimeManager.time+1.047f)+2*Mathf.Sin(TimeManager.time+0.628f)+ 9 * Mathf.Sin(TimeManager.time + 0.935f));
+    //    Random.InitState((int)x);
+    //    double a = Random.value;
+
+    //    if (a <0.3)
+    //        return guidao1;
+    //    else if (a <0.6)
+    //        return guidao2;
+    //    else if (a <0.9)
+    //        return guidao3;
+
+    //    return -1;
+    //}
     #endregion
 
+    #region 生成物体的速度（舍掉）
 
-    //生成物体的速度
-    int creatEnemySpeed()
-    {
-        x = 13 * (5 * Mathf.Sin(TimeManager.time) + 3 * Mathf.Cos(TimeManager.time + 0.783f) + 8 * Mathf.Cos(TimeManager.time + 1.047f) + 2 * Mathf.Sin(TimeManager.time + 0.628f) + 9 * Mathf.Sin(TimeManager.time + 0.935f));
-        Random.InitState((int)x);
-        double a = Random.value;
+    //int creatEnemySpeed()
+    //{
+    //    x = 13 * (5 * Mathf.Sin(TimeManager.time) + 3 * Mathf.Cos(TimeManager.time + 0.783f) + 8 * Mathf.Cos(TimeManager.time + 1.047f) + 2 * Mathf.Sin(TimeManager.time + 0.628f) + 9 * Mathf.Sin(TimeManager.time + 0.935f));
+    //    Random.InitState((int)x);
+    //    double a = Random.value;
 
-        if (a < 0.3)
-            return guidao1;
-        else if (a < 0.6)
-            return guidao2;
-        else if (a < 0.9)
-            return guidao3;
+    //    if (a < 0.3)
+    //        return guidao1;
+    //    else if (a < 0.6)
+    //        return guidao2;
+    //    else if (a < 0.9)
+    //        return guidao3;
 
-        return -1;
-    }
+    //    return -1;
+    //}
+    #endregion
 
 }

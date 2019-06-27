@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             afterDeath();
-            Destroy(this);
+            Destroy(this.gameObject);
 
         }
     }

@@ -22,8 +22,9 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy1") {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy1")) {
             health -= Damage;
+            ContinueShakeCamera_1.panduan();
         }
     }
     //死亡效果

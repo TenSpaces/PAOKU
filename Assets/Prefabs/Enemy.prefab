@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5965883568259099181}
   - component: {fileID: 1349548964493368817}
   - component: {fileID: 4175311359197001133}
+  - component: {fileID: 6832431069150543324}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -89,7 +90,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2934813357017995163}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -123,6 +124,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Jiange: 8
+  Buff_1_1_1_fixedSpeed: 1
+  Buff_1_2_1_addSpeed: 0.1
+  Buff_1_3_2_ultimateSpeed: 0.5
+  Buff_1_3_2_cutScale: 0.2
+  Buff_2_1_1_fixedSpeed: 1
+  Buff_2_2_1_slowSpeed: 0.1
 --- !u!114 &4175311359197001133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,5 +140,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d44e3ab21c64af4baa1b2f47aa7c07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6832431069150543324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934813357017995163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dad0871698b5414cbc0222da832fada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

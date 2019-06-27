@@ -27,5 +27,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
     //死亡效果
-    private void AfterDeath() { }
+    public void AfterDeath() {
+
+    }
 }

@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpeed : MonoBehaviour
+public class EnemySpeed 
 {
     private float speed;
     //增速倍数
     private float zengsu = 1;
     //变速间隔时间
-    private float jiange;
+    private static float jiange;
 
-    public EnemySpeed() {
-
-    }
 
 
     /// <summary>

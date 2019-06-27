@@ -61,9 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buff_1_Accelerate.cs" />
+    <Compile Include="Assets\Scripts\Buff_2_SlowDown.cs" />
     <Compile Include="Assets\Scripts\ContinueShakeCamera_1.cs" />
     <Compile Include="Assets\Scripts\DestroyItself_Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyAutoCreate.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\EnemySpeed.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />

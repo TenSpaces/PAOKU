@@ -9,7 +9,8 @@ public class EnemyManager : MonoBehaviour
     private Buff_1_Acelerate accelerate;
     private Buff_2_SlowDown slowDown;
     private EnemySpeed originSpeed;
-    private float speeds;
+    [HideInInspector]
+    public static float Speeds;//整体游戏的速度
 
     //决定物体的速度处于哪种，0代表初始速度；1代表加速；2代表减速
     public static int panduan=0;
@@ -30,35 +31,44 @@ public class EnemyManager : MonoBehaviour
         
         slowDown = new Buff_2_SlowDown();
         originSpeed = new EnemySpeed();
-        speeds= originSpeed.CreatSpeed(Jiange);
+        
 
         accelerate = new Buff_1_Acelerate();
-        Buff_1_3_2_ultimateSpeed = speeds + Buff_1_3_2_ultimateSpeed;
+        Buff_1_3_2_ultimateSpeed = Speeds + Buff_1_3_2_ultimateSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(panduan==0)
-            transform.position = transform.position + new Vector3(0, 0, -speeds);
+        Speeds = originSpeed.CreatSpeed(Jiange);
+        if (panduan==0)
+            transform.position = transform.position + new Vector3(0, 0, -Speeds);
         if (panduan == 1) {
             if (buff_1 == 1)
-                speeds -= accelerate.AddFixedSpeed(Buff_1_1_1_fixedSpeed);
+                Speeds -= accelerate.AddFixedSpeed(Buff_1_1_1_fixedSpeed);
             else if (buff_1 == 2)
-                speeds -= accelerate.SpeedEscalating(Buff_1_2_1_addSpeed);
+                Speeds -= accelerate.SpeedEscalating(Buff_1_2_1_addSpeed);
             else if (buff_1 == 3)
-                speeds = accelerate.DownEscalating(speeds, Buff_1_3_2_ultimateSpeed, Buff_1_3_2_cutScale);
+                Speeds = accelerate.DownEscalating(Speeds, Buff_1_3_2_ultimateSpeed, Buff_1_3_2_cutScale);
             else if (buff_1 == 0)
                 accelerate.Nothing();
                 
         }
         if (panduan == 2) {
             if (buff_2 == 1)
-                speeds += slowDown.CutFixedSpeed(Buff_2_1_1_fixedSpeed);
+                Speeds += slowDown.CutFixedSpeed(Buff_2_1_1_fixedSpeed);
             else if (buff_2 == 2)
-                speeds += slowDown.SpeedSlowing(Buff_2_2_1_slowSpeed);
+                Speeds += slowDown.SpeedSlowing(Buff_2_2_1_slowSpeed);
             else if (buff_2 == 0)
                 slowDown.Nothing();
         }
+    }
+
+    /// <summary>
+    /// 控制所有敌人的
+    /// </summary>
+    /// <param name="beishu">速度的倍数</param>
+    public static void ControlEnemySpeed(float beishu) {
+        EnemySpeed.Control_beishu(beishu);
     }
 }

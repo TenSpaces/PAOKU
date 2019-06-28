@@ -24,5 +24,8 @@ public class PlayerMove : MonoBehaviour
             if (this.transform.position.x <= EnemyAutoCreate.kuandu)
                 this.transform.position += new Vector3(1, 0, 0);
         }
+        if (Input.GetKeyDown(KeyCode.W)) {
+            Debug.Log(Mathf.Lerp(0, 10, 0.5f));
+        }
     }
 }

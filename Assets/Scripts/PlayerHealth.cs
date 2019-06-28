@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 public class PlayerHealth : MonoBehaviour
 {
     [Tooltip("玩家血量")]
@@ -22,9 +22,10 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy1")) {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy1"))
+        {
             health -= Damage;
-            ContinueShakeCamera_1.panduan();
+            // ContinueShakeCamera_1.panduan();
         }
     }
     //死亡效果

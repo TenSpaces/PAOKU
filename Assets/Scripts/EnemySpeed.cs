@@ -6,7 +6,7 @@ public class EnemySpeed
 {
     private float speed;
     //增速倍数
-    private float zengsu = 1;
+    private static float zengsu = 1;
     //变速间隔时间
     private static float jiange;
 
@@ -33,5 +33,9 @@ public class EnemySpeed
 
         x = 0.15f * zengsu;
         return Mathf.Abs(x);
+    }
+
+    public static void Control_beishu(float beishu) {
+        zengsu = beishu;
     }
 }

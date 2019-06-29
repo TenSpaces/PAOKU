@@ -8,16 +8,20 @@ public class EnemySpeed
     //增速倍数
     private static float zengsu = 1;
     //变速间隔时间
+    public static float Jiange;
     private static float jiange;
-
+    public EnemySpeed(float Jianges) {
+        jiange = Jianges;
+        Jiange = Jianges;
+    }
 
 
     /// <summary>
     /// 生成速度,后期找一个算法替代随机
     /// </summary>
-    /// <param name="Jiange">速度改变时间间隔</param>
+    /// 
     /// <returns></returns>
-    public float CreatSpeed(float Jiange)
+    public float CreatSpeed()
     {
         float x;
         //x = 0.5f * (0.5f * Mathf.Sin(x) + 0 * Mathf.Cos(x + 0.783f) + 0.02f * Mathf.Cos(x + 1.047f) + 0.12f * Mathf.Sin(x + 0.628f) + 0.1f * Mathf.Sin(x + 0.935f));

@@ -30,7 +30,7 @@ public class EnemyManager : MonoBehaviour
     {
         
         slowDown = new Buff_2_SlowDown();
-        originSpeed = new EnemySpeed();
+        originSpeed = new EnemySpeed(Jiange);
         
 
         accelerate = new Buff_1_Acelerate();
@@ -40,7 +40,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Speeds = originSpeed.CreatSpeed(Jiange);
+        Speeds = originSpeed.CreatSpeed();
         if (panduan==0)
             transform.position = transform.position + new Vector3(0, 0, -Speeds);
         if (panduan == 1) {
@@ -62,6 +62,7 @@ public class EnemyManager : MonoBehaviour
             else if (buff_2 == 0)
                 slowDown.Nothing();
         }
+        Debug.Log(Speeds);
     }
 
     /// <summary>

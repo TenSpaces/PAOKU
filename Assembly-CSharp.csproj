@@ -60,16 +60,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Buff_1_Accelerate.cs" />
     <Compile Include="Assets\Scripts\Buff_2_SlowDown.cs" />
+    <Compile Include="Assets\Scripts\BuffAdditionAutoCreate.cs" />
     <Compile Include="Assets\Scripts\ContinueShakeCamera_1.cs" />
     <Compile Include="Assets\Scripts\DestroyItself_Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyAutoCreate.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\EnemySpeed.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />

@@ -14,8 +14,12 @@ public class DestroyItself_Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.transform.position.z <-30)
+        if (this.transform.position.z < -30)
+        {
             Destroy(gameObject);
+           
+        }
     }
+   
 
 }

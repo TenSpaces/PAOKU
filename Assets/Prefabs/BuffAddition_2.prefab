@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1575714529557878636}
   - component: {fileID: 5719129031293099048}
   - component: {fileID: 1973207513704716976}
+  - component: {fileID: 7866687818189280327}
+  - component: {fileID: 6012983232554411484}
   m_Layer: 0
   m_Name: BuffAddition_2
   m_TagString: Untagged
@@ -91,3 +93,27 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7866687818189280327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172113086469273476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444d23927d983db4fa71471c215c87ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6012983232554411484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172113086469273476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad46659452f60c84993721f3b9c52767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -62,7 +62,7 @@ public class EnemyManager : MonoBehaviour
             else if (buff_2 == 0)
                 slowDown.Nothing();
         }
-        Debug.Log(Speeds);
+       
     }
 
     /// <summary>
